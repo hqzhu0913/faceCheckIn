@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/user.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="js/userv2.js"></script>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body class="page-home">
+        <!-- <header>
+            <nav class='nav-content'>
+                <button class="btncls" onclick="location.href='index.html'"><i class="fa fa-home"></i> Home</button>
+            </nav>
+        </header> -->
+        <section class="form-wrap">
+            <div id="registrationForm" >
+                <table class="smalltable">
+                    <thead>
+                        <th>User Register</th>
+                    </thead>
+                    <tbody>
+                        <tr><td>
+                            <div class="divspaced">Employee ID:</div>
+                            <div><input type="text" id="employeeId" class="field-style field-split align-none text-field"placeholder="e.g.: 111111" required></div>
+                            <div class="divspaced"><input id='employeeIDrst' type='button' value='Reset ID' class='btn align-right not_show'></div>
+                                <div><input id='employeeIDbtn' type='button' value='Next' class='btn align-right'></div>
+                        </td></tr>
+                    </tbody>
+                </table>
+                <table style="margin:0 auto;">
+                    <tbody>
+                        <tr class="not_show" ><td>
+                            <div class="info-wrapper" style="display:flex">
+                                <div style="flex:1">
+                                    <div class="divspaced">First Name:</div>
+                                    <input type="text" id="employeeFirstName" class="field-style field-split align-none text-field" value='' required>
+                                    <div class="divspaced">Last Name:</div>
+                                    <input type="text" id="employeeLastName" class="field-style field-split align-none text-field" value='' required>
+                                </div>
+                                <div style="flex:1">
+                                    <div class="divspaced" style='padding-bottom: 10px;'>
+                                        <strong>Terms of use</strong>
+                                    </div>
+                                    <div style="border: 1px solid #b0cfe0; overflow: auto; padding: 10px;background:#fefefe">
+                                        <p>Need permission from you to take a picture of you and use it in camera check-in system at the techgym.</p>
+                                    </div>
+                                    <div class="divspaced"><input type="checkbox" name="agree" value="agree" required class='align-left'/>
+                                    Agree with the terms and conditions</div>
+                                    <input id='startCamera' type='button' value='Start Camera' class='btn align-left '>
+
+                                </div>
+
+                            </div>
+                            
+                            <div id="photo-wrapper">
+                                    <hr>
+                                <div class="camera divspaced">
+                                        <video id="video" onplay="onPlay(this)" autoplay muted></video>
+                                    </div>
+                                <h4>We need three photos. Please follow instructions.</h4>
+                                <div class="container">
+                                    <input id='frontPhoto' type='button' value='Look Forward' class='btn' style="margin-right:10px;">
+                                    <input id='leftPhoto' type='button' value='Look Left' class='btn' style="margin-right:10px;">
+                                    <input id='rightPhoto' type='button' value='Look Right' class='btn'>
+                                </div>
+                                <canvas id="canvas1" style="width:200px"></canvas>
+                                <canvas id="canvas2" style="width:200px"></canvas>
+                                <canvas id="canvas3" style="width:200px"></canvas>
+                            </div>
+                        </td></tr>
+                        <tr id="form-submit-row"><td><input id='submit' type="submit" class="btn" value='Submit'></td></tr>
+                    </tbody>
+                </table>
+
+                
+               
+            </div>
+        </section>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/aws-cognito-sdk.min.js"></script>
+        <script src="js/vendor/amazon-cognito-identity.min.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/cognito-auth.js"></script>
+    
+    </body>
+</html>
